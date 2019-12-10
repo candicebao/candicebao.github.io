@@ -1,0 +1,242 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+/**
+ * Basic styling
+ */
+body {
+  color: #555;
+}
+
+/**
+ * Pricing blurb
+ */
+.more-info {
+  @include relative-font-size(0.8);
+  text-align:right;
+  float: right;
+  margin-top: 8px;
+  padding-bottom: 6px;
+}
+
+/**
+ * Links
+ */
+$brand-color: #33bb33;
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $brand-color;
+  }
+
+  &:hover {
+    color: #339933;
+    text-decoration: none;
+  }
+
+  .social-media-list &:hover {
+    text-decoration: none;
+  
+    .username {
+      text-decoration: none;
+    }
+  }
+}
+
+/**
+ * Images
+ */
+img {
+  height: auto;
+}
+
+/**
+ * Site header
+ */
+.site-header {
+  min-height: $spacing-unit * 2.0;
+}
+ 
+.site-header-page-title {
+  @include relative-font-size(1.625);
+  font-weight: 300;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  color: #bbbbbb;
+  // border-left: 1px solid #808080;
+  // padding-left: 8px;
+  margin-left: 8px;
+  float: left;
+}
+
+// Used on home page only (when subtitle is below)
+.site-title-with-subtitle {
+   @include relative-font-size(1.625);
+   font-weight: 300;
+   line-height: 34px;
+   letter-spacing: -1px;
+   margin-bottom: 0;
+   float: left;
+
+   &,
+   &:visited {
+     color: $grey-color-dark;
+   }
+}
+
+// Used on home page only (when subtitle is below)
+.site-header-subtitle {
+  @include relative-font-size(0.8);
+  font-weight: 300;
+  line-height: 22px;
+  color: #bbbbbb;
+  float: left;
+  clear: both;
+}
+
+/**
+ * Site footer
+ * (Customized to be two columns instead of three)
+ */
+$column_padding: $spacing-unit;
+
+.footer-col-wrapper {
+  margin-left: -$column_padding;
+}
+
+.footer-col {
+  padding-left: $column_padding;
+}
+ 
+.footer-col-1,
+.footer-col-2 {
+  width: -webkit-calc(50% - (#{$column_padding}));
+  width:         calc(50% - (#{$column_padding}));
+}
+
+@include media-query($on-laptop) {
+  .footer-col-1,
+  .footer-col-2 {
+    width: -webkit-calc(50% - (#{$column_padding}));
+    width:         calc(50% - (#{$column_padding}));
+  }
+}
+
+@include media-query($on-palm) {
+  .footer-col {
+    float: none;
+    width: -webkit-calc(100% - (#{$column_padding}));
+    width:         calc(100% - (#{$column_padding}));
+  }
+}
+
+.footer-heading {
+  color: #000;
+  font-weight: 600;
+}
+
+.copyright {
+  @include relative-font-size(0.8);
+  color: $grey-color;
+}
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #eee;
+}
+
+.highlight {
+  .highlighter-rouge & {
+    background: #eee;
+  }
+}
+
+/**
+ * Post list
+ */
+
+.post-list {
+  li {
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    line-height: 12px;
+    margin-bottom: 0;
+  }
+}
+ 
+.post-meta {
+  @include relative-font-size(0.7);
+}
+
+.post-link {
+  @include relative-font-size(0.9);
+}
+
+/**
+ * Post
+ */
+.post-title {
+  @include relative-font-size(1.8);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  // Mainly for code page
+  h3 {
+    font-weight: 600;
+    @include relative-font-size(1.425);
+    margin-bottom: 8px;
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.275);
+    }
+  }
+  
+  h3:not(:first-child) {
+    margin-top: 32px;
+  }
+}
+
+/**
+ * Pagination
+ */
+.pagination {
+  padding-top: 10px;
+  
+  a {
+    color: $grey-color;
+    text-align: center;
+    width: 84px;
+    border-radius: 12px;
+    border: 1px solid $grey-color-light;
+    padding: 10px;
+  }
+  
+  a:hover {
+    color: $brand-color;
+    border: 1px solid $brand-color;
+  }
+  
+  .previous {
+    float: left;
+  }
+  
+  .next {
+    float: right;
+  }
+}

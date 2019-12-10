@@ -1,0 +1,20 @@
+title: candice bao
+#url: "http://candicebao.org"
+url: ""
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
+
+theme: minima
+
+minima:
+  date_format: "%B %-d, %Y"
+
+# By default, jekyll-feed uses `/feed.xml`, but Wordpress uses
+# either `?feed=atom` or `/feed`, so let's try the latter
+feed:
+  path: feed

@@ -1,0 +1,48 @@
+---
+layout: page
+title: candice bao
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="/assets/js/photos.js"></script>
+
+<style>
+<!--
+/* Basic two-column layout derived from https://stackoverflow.com/a/49120196 */
+.photorow {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  column-count: 2;
+  column-gap: 10px;
+}
+
+.photocolumn {
+  break-inside: avoid;
+}
+
+.photocolumn div {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.photocolumn img { 
+  width: 100%;
+}
+
+#photo_column1 img {
+  /* XXX: Hack to make diptych painting heights match (because their heights don't match on Flickr) */
+  margin-top: -2px;
+}
+-->
+</style>
+
+<div id="photo_container" class="photorow">
+  <!-- The function displayImages() uses these divs -->
+  <div id="photo_column1" class="photocolumn">
+  </div>
+  <div id="photo_column0" class="photocolumn">
+  </div>
+</div>
